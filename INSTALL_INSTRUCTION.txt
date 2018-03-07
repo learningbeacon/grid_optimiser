@@ -1,1 +1,9 @@
-To be updated............
+PREREQUISITES:
+
+1. Node JS version 4.x or greater
+2. OS - Ubuntu 16.04 LTS(this is where the project has been created) or Windows 7/8/10. No support for MAC currently.
+3. The node package manager(any latest version)
+
+Node packages:
+1. serialport - the package helps in the interface of the patform with the serial port where the MCU populates its data.
+2. weather-js - This package provides weather information about a particular location (uses msn-weather app)
