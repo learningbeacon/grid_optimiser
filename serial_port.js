@@ -7,7 +7,7 @@ const fs = require('fs');
 const deviceData = require("./log/deviceParam.json");
 const sourceData = require("./log/sourceParam.json");
 
-portname = '/dev/ttyACM0';
+portname = 'COM5';
 deviceFile = "./log/deviceParam.json";
 sourceFile = "./log/sourceParam.json";
 
