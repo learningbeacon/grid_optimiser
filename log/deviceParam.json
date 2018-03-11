@@ -1,0 +1,22 @@
+{
+  "sensor1": {
+    "curr_value": 1.2,
+    "threshold": 2.0
+  },
+  "sensor2":{
+    "curr_value": 1.4,
+    "threshold" : 2
+  },
+  "sensor3":{
+    "curr_value": 1.2,
+    "threshold": 2
+  },
+  "sensor4":{
+    "curr_value": 1.4,
+    "threshold": 2
+  },
+  "sensor5":{
+    "curr_value": 1.4,
+    "threshold": 2
+  }
+}

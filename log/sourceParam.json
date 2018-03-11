@@ -1,0 +1,10 @@
+{
+  "utility": {
+    "volt_value":24,
+    "threshold": 25
+  },
+  "pv":{
+    "volt_value": 0,
+    "threshold": 24
+  }
+}
