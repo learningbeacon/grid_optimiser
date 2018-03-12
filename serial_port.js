@@ -7,7 +7,7 @@ const fs = require('fs');
 const deviceData = require("./log/deviceParam.json");
 const sourceData = require("./log/sourceParam.json");
 
-portname = 'COM5';
+portname = '/dev/ttyACM0';
 deviceFile = "./log/deviceParam.json";
 sourceFile = "./log/sourceParam.json";
 
@@ -47,7 +47,7 @@ setInterval(function(){
 setInterval(function(){ //to be changed
     var str = "";
     port.write("10,12,2,12,23,45,5,");   
-},8000);
+},6000);
 
 //Update the list of devices available (nodes in the network)
 deviceList = Object.keys(deviceData);
@@ -60,7 +60,7 @@ var updateRecord = function(filename,label,list){
     payload = JSON.parse(payload);
 
     for(i = 0;i < list.length; i++){
-        payload[label[i]] = list[i];
+        payload[label[i]].curr_value = list[i];
     }
 
     json = JSON.stringify(payload,null,2);
@@ -68,9 +68,6 @@ var updateRecord = function(filename,label,list){
     fs.writeFile(filename, json, 'utf8', function(err){
         if(err){
             console.log(err);
-        }
-        else{
-            console.log("Written to file!!");
         }
     }); // write it back 
 };
