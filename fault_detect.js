@@ -33,7 +33,6 @@ setInterval(function(){
     payload1 = JSON.parse(payload1);
     deviceList = Object.keys(payload1);
     
-    console.log(deviceList);
     detectFault(payload1);
 },4000);
 
