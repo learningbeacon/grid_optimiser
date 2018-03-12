@@ -1,22 +1,27 @@
 {
   "sensor1": {
     "curr_value": 1.2,
-    "threshold": 2.0
+    "threshold": 2,
+    "state": 1
   },
-  "sensor2":{
-    "curr_value": 1.4,
-    "threshold" : 2
-  },
-  "sensor3":{
+  "sensor2": {
     "curr_value": 1.2,
-    "threshold": 2
+    "threshold": 2,
+    "state": 1
   },
-  "sensor4":{
-    "curr_value": 1.4,
-    "threshold": 2
+  "sensor3": {
+    "curr_value": 1.2,
+    "threshold": 2,
+    "state": 1
   },
-  "sensor5":{
+  "sensor4": {
     "curr_value": 1.4,
-    "threshold": 2
+    "threshold": 2,
+    "state": 1
+  },
+  "sensor5": {
+    "curr_value": 1.4,
+    "threshold": 2,
+    "state": 0
   }
 }

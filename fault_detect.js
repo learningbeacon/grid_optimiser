@@ -24,7 +24,7 @@ const detectFault = function(data){
     }
     if(max > 0){
         console.log(".......Fault Detected near "+ fault_point +".......");
-        faultHandler.clearFault(fault_point,deviceData.indexOf(fault_point));
+        faultHandler.clearFault(deviceList.indexOf(fault_point));
     }
 };
 
