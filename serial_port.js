@@ -44,11 +44,6 @@ setInterval(function(){
     console.log(sen);  //print the readings from the sensors on the console    
 },3000);
 
-setInterval(function(){ //to be changed
-    var str = "";
-    port.write("10,12,2,12,23,45,5,");   
-},6000);
-
 //Update the list of devices available (nodes in the network)
 deviceList = Object.keys(deviceData);
 sourceList = Object.keys(sourceData);

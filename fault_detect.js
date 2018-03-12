@@ -29,12 +29,12 @@ const detectFault = function(data){
 };
 
 setInterval(function(){
-    payload = fs.readFileSync(deviceFile,'utf8');
-    payload = JSON.parse(payload);
-    deviceList = Object.keys(payload);
+    payload1 = fs.readFileSync(deviceFile,'utf8');
+    payload1 = JSON.parse(payload1);
+    deviceList = Object.keys(payload1);
     
     console.log(deviceList);
-    detectFault(payload);
-},5000);
+    detectFault(payload1);
+},4000);
 
 // call the default blocks at an interval of 5seconds
