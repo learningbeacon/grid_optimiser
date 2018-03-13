@@ -1,11 +1,11 @@
 {
   "utility": {
-    "curr_value": 0,
+    "curr_value": 30,
     "threshold": 25,
     "state": 1
   },
   "pv": {
-    "curr_value": 0,
+    "curr_value": 20,
     "threshold": 25,
     "state": 0
   }
