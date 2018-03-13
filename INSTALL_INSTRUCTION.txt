@@ -7,3 +7,5 @@ PREREQUISITES:
 Node packages:
 1. serialport - the package helps in the interface of the patform with the serial port where the MCU populates its data.
 2. weather-js - This package provides weather information about a particular location (uses msn-weather app)
+
+The packages mentioned are to be installed into the cloned repository
