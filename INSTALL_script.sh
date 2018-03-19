@@ -60,8 +60,21 @@ fi
 
 if [ -e ./node_modules/weather-js/ ] && [ -e ./node_modules/serialport/ ] && [ -e ./node_modules/aws-iot-device-sdk/ ]
 then
-	echo "$(tput setaf 3) ALL MODULES INSTALLED SUCCESSFULLY$(tput sgr0)"
+	echo "$(tput setaf 3) ALL MODULES INSTALLED SUCCESSFULLY $(tput bel)$(tput sgr0)"
 else
 	echo "$(tput setaf 1) ALL MODULES NOT INSTALLED.... check dependency list in INSTALL_INSTRUCTIONS.txt$(tput sgr0)"
 fi
 
+echo "Running Serial- Port read ....."
+gnome-terminal -e "node serial_port.js" --window-with-profile="Serial Read Command"
+
+echo "Running fault-detect block ...."
+gnome-terminal -e "node fault_detect.js"
+
+echo "Running aws_upload block..."
+gnome-terminal -e "node aws_upload.js"
+
+echo "Running load balancing block..."
+gnome-terminal -e "node loadBalance.js"
+
+echo "$(tput setaf 3)$(tput bold)ALL MODULES RUNNING NOW....$(tput sgr0)"
