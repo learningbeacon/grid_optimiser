@@ -55,7 +55,7 @@ setInterval(function(){
     }
     write2file(payload);
     updateGrid(payload);
-},2000);
+},6000);
 
 function getUpdatedValues(data){
     for(i = 0; i < sourceList.length; i++){

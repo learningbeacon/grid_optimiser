@@ -34,6 +34,6 @@ setInterval(function () {
     deviceList = Object.keys(payload1);
 
     detectFault(payload1);
-}, 4000);
+}, 7000);
 
 // call the default blocks at an interval of 5seconds

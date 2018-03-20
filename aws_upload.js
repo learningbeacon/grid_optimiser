@@ -8,8 +8,8 @@ var fs = require('fs');
 // connection will be terminated.
 //
 var device = awsIot.device({
-   keyPath: './AWS_keys/880b4ce37f-private.pem.key',
-  certPath: './AWS_keys/880b4ce37f-certificate.pem.crt',
+   keyPath: './AWS_keys/8a8130cf86-private.pem.key',
+  certPath: './AWS_keys/8a8130cf86-certificate.pem.crt',
     caPath: './AWS_keys/rootCA.pem',
   clientId: 'energyoptimiser',
       host: 'a1at9zut3gj0ze.iot.us-west-2.amazonaws.com'
@@ -19,16 +19,17 @@ var device = awsIot.device({
 // Device is an instance returned by mqtt.Client(), see mqtt.js for full
 // documentation.
 //
+device
+.on('connect', function() {
+  console.log('connect');
+  device.subscribe('energyPolicy');
+});
+
 setInterval(function(){
-  device
-  .on('connect', function() {
-    console.log('connect');
-    device.subscribe('energyPolicy');
-    load =fs.readFileSync("./deviceParam.json",'utf8');
-    load = JSON.parse(load);
-    device.publish('energyPolicy', JSON.stringify(load));
-  });
-},4500);
+  load =fs.readFileSync("./log/deviceParam.json",'utf8');
+  load = JSON.parse(load);
+  device.publish('energyPolicy', JSON.stringify(load));
+},26000);
 
 /*
  This piece of code sends the data from the JSON file storing device data regularly at an interval of 4.5 sec
