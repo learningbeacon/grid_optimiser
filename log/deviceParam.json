@@ -1,23 +1,23 @@
 {
   "sensor1": {
-    "curr_value": 4.21,
+    "curr_value": 4.18,
     "threshold": 2,
     "state": 0
   },
   "sensor2": {
-    "curr_value": 2.45,
+    "curr_value": 2.4,
     "threshold": 2,
     "state": 1
   },
   "sensor3": {
-    "curr_value": 2.23,
+    "curr_value": 2.21,
     "threshold": 2,
     "state": 1
   },
   "sensor4": {
-    "curr_value": 2.38,
+    "curr_value": 2.35,
     "threshold": 2,
-    "state": 0
+    "state": 1
   },
   "sensor5": {
     "curr_value": 2.05,
