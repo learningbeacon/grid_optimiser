@@ -6,6 +6,8 @@ var fs = require('fs');
 var SerialPort = require('serialport');
 var weather = require('weather-js');
 
+portname = "/dev/ttyACM0"
+
 //import required files
 const devfile = "./log/deviceParam.json";
 const srcfile = "./log/sourceParam.json";
