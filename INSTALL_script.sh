@@ -65,12 +65,7 @@ else
 	echo "$(tput setaf 1) ALL MODULES NOT INSTALLED.... check dependency list in INSTALL_INSTRUCTIONS.txt$(tput sgr0)"
 fi
 
-echo "Running Serial- Port read ....."
-echo "Running fault-detect block ...."
-echo "Running load balancing block..."
-echo "AWS_service initialized.........\n\n"
-
-echo "$(tput setaf 3)$(tput bold)ALL MODULES RUNNING NOW....$(tput sgr0)"
+echo "$(tput setaf 3)$(tput bold)ALL MODULES ARE READY TO RUN NOW....$(tput sgr0)"
 
 read -p "Would you like to start the application?(y/n) " choice
 
@@ -80,7 +75,14 @@ then
         echo "$(tput setaf 3)$(tput bold)############################################################################################################\n\n"
         echo "###############                    ENERGY OPTIMISER APPLICATION STARTUP                   ##################\n\n"
         echo "############################################################################################################\n\n$(tput sgr0)"
-        node main.js
+        echo "Running Serial- Port read ....."
+        gnome-terminal -e 'node serial_port.js'
+        echo "Running fault-detect block ...."
+        gnome-terminal -e 'node fault_detect.js'
+        echo "Running load balancing block..."
+        gnome-terminal -e 'node loadBalance.js'
+        echo "AWS_service initialized.........\n\n"
+        gnome-terminal -e 'node aws_upload.js'
 else
         echo "Finished Installation!!!!  [SUCCESS]"
         echo "You can run your application by running $(tput setaf 2)node main.js $(tput sgr0) from the project directory!!"
